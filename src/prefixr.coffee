@@ -69,22 +69,3 @@ module.exports = (css) =>
         result += "#{spaces}#{vendor}#{prop}: #{value};\n"
       result
   css
-
-#if(self.functions.indexOf('linear-gradient') > -1) {
-#			// Gradients are supported with a prefix, convert angles to legacy
-#			css = css.replace(/(\s|:|,)(repeating-)?linear-gradient\(\s*(-?\d*\.?\d*)deg/ig, function ($0, delim, repeating, deg) {
-#				return delim + (repeating || '') + 'linear-gradient(' + (90-deg) + 'deg';
-#			});
-#		}
-
-## > vendoredProperties.forEach(function(prop) {
-#  var regex = new RegExp("(?:;*)([ \s\t]*)?(" + prop + ")[\s]*:([^\n;]+);?");
-#   inputCSS = inputCSS.replace(regex, function(match, spaces, prop, value) {
-#     spaces = spaces || "";
-#     var result = "";
-#     vendors.forEach(function(vendor) {
-#       result += spaces + vendor + prop + ": " + value.replace("\n", "").trim() + ";\n";
-#     });
-#     return result;
-#   });
-# });
