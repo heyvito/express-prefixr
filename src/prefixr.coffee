@@ -53,7 +53,7 @@ vendors = [ '-webkit-', '-moz-', '-ms-', '-o-' ]
 
 module.exports = (css) =>
   vendoredProperties.forEach (prop) ->
-    regex = new RegExp "(?:;*)([ \s\t]*)?(#{prop})[\s]*:([^\n;]+);?", 'ig'
+    regex = new RegExp "(?:;*)([ \s\t]*)?(#{prop})[\s]*:([^\n;}]+);?", 'ig'
     css = css.replace regex, (match, spaces, prop, value) ->
       spaces = spaces or ''
       result = ''
