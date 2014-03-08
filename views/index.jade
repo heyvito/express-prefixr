@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    title Express Prefixr
+    link(href='/style.css', type='text/css', rel='stylesheet', media='screen')
+    script(src='http://code.jquery.com/jquery-2.1.0.min.js')
+    script(src='/application.js')
+  body
+    a(href='https://github.com/victorgama/express-prefixr')
+      img(style='position: absolute; top: 0; right: 0; border: 0;',
+          src='https://github-camo.global.ssl.fastly.net/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67',
+          alt='Fork me on GitHub',
+          data-canonical-src='https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png')
+    #content
+      h1 Express Prefixr
+      p Easily add vendored-properties to your CSS.
+
+      .boxes
+        .left
+          p Insert your CSS here
+          textarea#input
+          .go-button
+            button Prefix it!
+        .right
+          p And it will be prefixed and outputted here.
+          textarea#output(readonly)
+        .cf
+      h2 Open API!
+      p ExpressPrefixr has an open API. All you need to do is post
+        code css=(value)
+        | to
+        code http://
+          = host
+          |/api/processor
+      p The result will be your CSS with all prefixes. (:
+      pre.code
+        | ~ » curl http://localhost:3000/api/processor -d css='body { border-radius: 10px; }'
+        | body {
+        |        -webkit-border-radius: 10px;
+        |        -moz-border-radius: 10px;
+        |        -ms-border-radius: 10px;
+        |        -o-border-radius: 10px;
+        | }

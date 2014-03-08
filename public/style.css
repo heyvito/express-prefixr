@@ -1,0 +1,217 @@
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font: 400 14px/1.6 "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #666;
+}
+
+h1, h2, h3 {
+  margin: 5px 0;
+  font-weight: normal;
+  color: #353535;
+  -webkit-font-smoothing: antialiased;
+}
+
+p em {
+  font-weight: bold;
+  font-style: normal;
+  color: #353535;
+}
+
+p {
+  margin: 20px 0;
+}
+
+strong {
+  color: #353535;
+}
+
+.inner {
+  margin-top: 100px;
+}
+
+#content {
+  margin: 0 auto;
+  width: 700px;
+}
+
+li code {
+  color: #353535;
+}
+
+section section p {
+  width: 60%;
+}
+
+h2 {
+  margin-top: 80px;
+  font-weight: bold;
+}
+
+h3 {
+  background: url(/images/hr.png) top center no-repeat;
+  margin-top: 40px;
+  padding-top: 50px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+/* links */
+
+a {
+  color: #259dff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  display: block;
+  font: 60px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: #353535;
+  width: 100%;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
+.wrapper {
+  padding: 10px 20px;
+}
+
+.boxes {
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.boxes p {
+  margin-bottom: 0;
+}
+
+.boxes textarea {
+  width: 100%;
+  height: 390px;
+  font-family: Monaco, 'Lucida Console';
+  font-size: 12px;
+}
+
+.boxes .left {
+  float: left;
+  width: 390px;
+}
+
+.boxes .right {
+  float: right;
+  width: 390px;
+}
+
+
+.go-button button {
+  float: right;
+	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+	background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+	background-color:#77d42a;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #268a16;
+	display:inline-block;
+	color:#306108;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:50px;
+	line-height:48px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #aade7c;
+}
+
+.go-button button:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+  background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+  background-color:#5cb811;
+}
+
+.go-button button:active {
+  position:relative;
+  top:1px;
+}
+
+code {
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  max-width: 100%;
+  display: inline-block;
+  overflow: auto;
+  vertical-align: middle;
+  line-height: 1.3;
+  padding: 0;
+  font-family: Monaco, 'Lucida Console';
+  font-size: 12px;
+}
+
+p {
+  font-size: 15px;
+line-height: 1.7;
+overflow: hidden;
+word-wrap: break-word;
+}
+
+pre.code {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+  font-family: Monaco, 'Lucida Console';
+  font-size: 12px;
+}
