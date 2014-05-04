@@ -24,7 +24,8 @@ Example:
 
 TODO
 -----
-* (Re)Add support to fragment-prefixing
+- [ ] _Re_Add support to fragment-prefixing
+- [ ] Add support to `@-rules`
 
 Acknowledgements
 ----------------
