@@ -1,5 +1,5 @@
 DeclarationList = require './declaration_list'
-DeclarationValueList = require './declaration_Value_list'
+DeclarationValueList = require './declaration_value_list'
 
 class CSSRule
     constructor: (rule)->
