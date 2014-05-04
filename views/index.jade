@@ -4,6 +4,7 @@ html
     title Express Prefixr
     link(href='/style.css', type='text/css', rel='stylesheet', media='screen')
     script(src='http://code.jquery.com/jquery-2.1.0.min.js')
+    script(src='/jquery-linenumbers.js')
     script(src='/application.js')
   body
     a(href='https://github.com/victorgama/express-prefixr')
@@ -35,9 +36,7 @@ html
       p The result will be your CSS with all prefixes. (:
       pre.code
         | ~ » curl http://localhost:3000/api/processor -d css='body { border-radius: 10px; }'
-        | body {
-        |        -webkit-border-radius: 10px;
-        |        -moz-border-radius: 10px;
-        |        -ms-border-radius: 10px;
-        |        -o-border-radius: 10px;
+        | {
+        |      "status": "success",
+        |      "result": "body {\n  -webkit-border-radius: 10px;\n  -moz-border-radius: 10px;\n  -ms-border radius: 10px;\n  -o-border-radius: 10px;\n  border-radius: 10px;\n}"
         | }

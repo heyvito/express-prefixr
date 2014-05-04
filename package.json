@@ -1,6 +1,6 @@
 {
   "name": "express-prefixr",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Prefixr alternative built with Node + Express",
   "main": "lib/express-prefixr",
   "scripts": {
@@ -24,8 +24,9 @@
   "dependencies": {
     "express": "~3.5.0",
     "jade": "~1.3.0",
-    "cssbeautify": "~0.3.1",
-    "logfmt": "~0.21.0"
+    "logfmt": "~0.21.0",
+    "css-parse": "^1.7.0",
+    "css-stringify": "^1.4.1"
   },
   "devDependencies": {
     "grunt-contrib-coffee": "~0.10.1"

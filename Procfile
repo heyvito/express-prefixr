@@ -1,1 +1,1 @@
-web: node lib/express-prefixr.js
+web: node lib/express_prefixr.js
