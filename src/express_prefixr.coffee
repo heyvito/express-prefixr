@@ -18,12 +18,19 @@ app.get '/', (req, res) ->
     host: req.headers.host
 
 app.post '/api/processor', (req, res) ->
-  css = null
+  css = req.body.css
+  fragment = '{' not in css
+  fragment_hacky_selector = '.prefixr-hacky-selector'
+  fragment_hacky_regex = new RegExp("#{fragment_hacky_selector}\\s?\{\\n*([^}]+)\}", 'gi')
   response =
     status: null
     result: null
+
+  if fragment
+    css = "#{fragment_hacky_selector} { #{css} }"
+
   try
-    css = new CSSDocument req.body.css
+    css = new CSSDocument css
   catch ex
     console.log("Error: #{ex}")
     if ex.name? and ex.name is 'ParsingException'
@@ -35,6 +42,14 @@ app.post '/api/processor', (req, res) ->
     css.rebuildDocument()
     response.status = "success"
     response.result = css.rebuildCSS()
+
+  if fragment
+    response.result = fragment_hacky_regex
+                        .exec(response.result.toString())[1]
+                        .split '\n'
+                        .map (item) ->
+                          return item.replace /(^\s+|\s+$)/g, ''
+                        .join '\n'
 
   res.setHeader('Content-Type', 'application/json');
   res.send JSON.stringify(response)
