@@ -5,7 +5,7 @@ Node + Express Prefixr alternative
 
 Demo: [http://expressprefixr.herokuapp.com](http://expressprefixr.herokuapp.com)
 
-Automatically prefixes vendored properties in CSS and SCSS files, as an alternative
+Automatically prefixes vendored properties in CSS and ~~SCSS~~ files, as an alternative
 to [prefixr.com](http://prefixr.com).
 
 API
@@ -29,7 +29,7 @@ TODO
 
 Acknowledgements
 ----------------
-**Uses portions of [Express.js](http://expressjs.com), licensed under The MIT License**
+**Uses CSS portions of [Express.js](http://expressjs.com), licensed under The MIT License**
 
 Copyright (c) 2009-2012 TJ Holowaychuk <tj@vision-media.ca>
 
