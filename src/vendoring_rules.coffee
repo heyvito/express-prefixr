@@ -51,7 +51,7 @@ class VendoringRules
   ]
 
   @vendoredValues = [
-    'linear-gradient', 'radial-gradient',
+    'flex', 'linear-gradient', 'radial-gradient',
     'repeating-linear-gradient', 'repeating-radial-gradient'
   ]
 

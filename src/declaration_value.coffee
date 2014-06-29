@@ -13,6 +13,7 @@ class DeclarationValue
         @function_name = null
         @standard_function = null
         @is_vendored_function = false
+        @is_vendored_value = false
 
         if @constructor.function_name_extractor.test value
             @is_function = true
@@ -24,6 +25,9 @@ class DeclarationValue
             if not @standard_function?
                 @standard_function = value
             @is_vendored_function = @function_name in VendoringRules.vendoredValues
+        else
+            @is_vendored_value = @original_value in VendoringRules.vendoredValues
+
 
     applyToProperties: (propertyList)->
         result = []
@@ -48,6 +52,16 @@ class DeclarationValue
                 prop = extend({}, property)
                 prop.value = "#{@standard_function}"
                 prop
+        else if @is_vendored_value
+            result = []
+            for vendor in @vendors
+                prop = extend({}, property)
+                prop.value = "-#{vendor}-#{@original_value}"
+                result.push prop
+            result.push do =>
+                prop = extend({}, property)
+                prop.value = "#{@original_value}"
+                prop
         else
             result = property
             result.value = @original_value
@@ -57,7 +71,7 @@ class DeclarationValue
         if @function_name_extractor.test value
             @vendor_remover.test value
         else
-            false
+            value in VendoringRules.vendoredValues
 
 
 module.exports = DeclarationValue
