@@ -5,6 +5,7 @@ module.exports = (grunt) ->
         files:
           'lib/css_document.js': ['src/css_document.coffee']
           'lib/css_rule.js': ['src/css_rule.coffee']
+          'lib/comment.js': ['src/comment.coffee']
           'lib/declaration.js': ['src/declaration.coffee']
           'lib/declaration_list.js': ['src/declaration_list.coffee']
           'lib/declaration_value.js': ['src/declaration_value.coffee']
